@@ -9,11 +9,11 @@ pip install ra-viz
 
 ## Usage
 ```python
-from Ra import Ra
+from ra import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')
-ra = Ra(df)
+ra = ra(df)
 ra.createMap()
 ra.saveMap('MyMap.html')
 ```
