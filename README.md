@@ -4,7 +4,7 @@ Ra helps easily generate geographic visualization using the folium package.
 ## Installation
 
 ```bash
-pip install Ra-Viz
+pip install ra-viz
 ```
 
 ## Usage
