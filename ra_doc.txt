@@ -1,0 +1,153 @@
+Help on module ra:
+
+NAME
+    ra
+
+DESCRIPTION
+    ______       ______ _                 _   _ _                 _ _              
+    | ___ \      |  ___| |               | | | (_)               | (_)             
+    | |_/ /__ _  | |_  | | _____      __ | | | |_ ___ _   _  __ _| |_ _______ _ __ 
+    |    // _` | |  _| | |/ _ \ \ /\ / / | | | | / __| | | |/ _` | | |_  / _ \ '__|
+    | |\ \ (_| | | |   | | (_) \ V  V /  \ \_/ / \__ \ |_| | (_| | | |/ /  __/ |   
+    \_| \_\__,_| \_|   |_|\___/ \_/\_/    \___/|_|___/\__,_|\__,_|_|_/___\___|_|
+    By: Christopher Mendoza
+
+CLASSES
+    builtins.object
+        ra
+    
+    class ra(builtins.object)
+     |  Ra is a class will create, save and customize point to point visualizations.
+     |  
+     |  Ra Map Customization Parameters:
+     |      popupLen The amount of flows that will appear in a popup. Default = 3
+     |      sortVar: The name of the column to sort flows by. Default = None
+     |      MarkerInfo: The column names that will appear in the marker popups. Default = None (Shows All)
+     |      getMarkerLogos: Add marker logos to map, will only work if you applied dfAddLogos. Default = False
+     |      logoCheck: Verify if logo is in web-server using url request. Default = True
+     |      lineFunction: Color of line that will be drawn (can be dynamically modified using setLineFunction). Default = 'green'
+     |      lineOpacity: Opacity of line that will be drawn (can be dynamically modified using lineOptions). Default = 1
+     |      popupWidth: Will modify the width of the popup, marker popup and line popup can be adjusted seperately. Default = {'marker':1000,'line':1000}
+     |      plotX: The x-axis variable (name of pandas column) for the plot drawn in the popup. Default = None
+     |      plotY: The y-axis variable (name of pandas column) for the polot drawn in the popup. Default = None
+     |      plotType: Selects the type of plot to draw. Default = 'bar'
+     |      plotHue: Variable (name of pandas column) to adjust hue of points in plot. Default = None
+     |      plotEstimator: The estimator to be used for the plots. Default = sum
+     |      plotCI: Confidence interval for plot. Default = None
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, df)
+     |      Loads selected dataframe as class dataframe and makes sure it's in the correct format.
+     |      df: Pandas dataframe to set as class dataframe.
+     |  
+     |  addMarkers(self)
+     |      Renders markers on class map based on html generated from inter and intra marker functions.
+     |  
+     |  aggregate(self, column)
+     |      Aggregates class dataframe by src_column and dst_column.
+     |      To aggregate there must be two columns that only differ in name by src_ and dst_ prefixes.
+     |  
+     |  createMap(self)
+     |      Calls appropriate functions to create a map from Ra instance dataframe.
+     |  
+     |  drawLines(self)
+     |      Creates html for line popups, then renders lines on class map.
+     |  
+     |  focus(self, op)
+     |      Filters class dataframe by df.query string given and saves original non-filtered dataframe into origdf.
+     |      op: df.query string
+     |  
+     |  interMarkers(self)
+     |      Creates html for inter-communication markers and stores them into dictionary to be rendered later.
+     |  
+     |  intraMarkers(self)
+     |      Creates html for intra-communication markers and stores them into dictionary to be rendered later.
+     |  
+     |  lineFunction(self, df)
+     |      Function to add coloring to lines added to the map.
+     |  
+     |  makePlot(self, df)
+     |      Creates plot for popup.
+     |  
+     |  makePopupHTML(self, df, data=True)
+     |      Creates HTML code to embed in marker and line popups.
+     |      Data is enabled if a plot needs to be made.
+     |      Plot will only be made if user defines x and y variables.
+     |  
+     |  plotEstimator = sum(iterable, start=0, /)
+     |      Return the sum of a 'start' value (default: 0) plus an iterable of numbers
+     |      
+     |      When the iterable is empty, return the start value.
+     |      This function is intended specifically for use with numeric values and may
+     |      reject non-numeric types.
+     |  
+     |  saveMap(self, savefile)
+     |      Saves map file.
+     |      Can be saved as a .ejs file to be rendered on a server.
+     |  
+     |  setLineFunction(self, method)
+     |      Set user defined lineFunction
+     |      method: user defined function
+     |      
+     |      Example(self,df):
+     |          if max(df['column_name']) > 10:
+     |              return 'red'
+     |  
+     |  split(self)
+     |      Splits class dataframe into intra and inter communication flows.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  agg_lats = {}
+     |  
+     |  agg_longs = {}
+     |  
+     |  getMarkerLogos = False
+     |  
+     |  lineColor = 'green'
+     |  
+     |  lineOpacity = 1
+     |  
+     |  logoCheck = True
+     |  
+     |  m = <folium.folium.Map object>
+     |  
+     |  markerInfo = None
+     |  
+     |  markerList1 = []
+     |  
+     |  markerList2 = []
+     |  
+     |  plotCI = None
+     |  
+     |  plotHue = None
+     |  
+     |  plotType = 'bar'
+     |  
+     |  plotX = None
+     |  
+     |  plotY = None
+     |  
+     |  popupLen = 3
+     |  
+     |  popupOrder = None
+     |  
+     |  popupWidth = {'line': 1000, 'marker': 1000}
+     |  
+     |  preserve = []
+     |  
+     |  sortVar = None
+
+
+
