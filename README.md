@@ -4,12 +4,12 @@ Ra helps easily generate geographic visualization using the folium package.
 ## Installation
 
 ```bash
-pip install ra-viz
+pip install raViz
 ```
 
 ## Usage
 ```python
-from ra_viz import ra
+from raViz import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')

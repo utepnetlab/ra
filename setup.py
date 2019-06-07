@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ra_viz",
-    version="0.0.1",
+    name="raViz",
+    version="0.0.4",
     author="Christopher Mendoza",
     author_email="camendoza7@miners.utep.edu",
     description="Package to help create flow visualizations",
@@ -17,12 +17,12 @@ Ra helps easily generate geographic visualization using the folium package.
 ## Installation
 
 ```bash
-pip install ra-viz
+pip install raViz
 ```
 
 ## Usage
 ```python
-from ra_viz import ra
+from raViz import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')
