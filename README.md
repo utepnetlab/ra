@@ -9,7 +9,7 @@ pip install ra-viz
 
 ## Usage
 ```python
-from ra import ra
+from ra_viz import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')

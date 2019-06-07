@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ra-viz",
+    name="ra_viz",
     version="0.0.1",
     author="Christopher Mendoza",
     author_email="camendoza7@miners.utep.edu",
@@ -22,7 +22,7 @@ pip install ra-viz
 
 ## Usage
 ```python
-from ra import ra
+from ra_viz import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')
