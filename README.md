@@ -9,7 +9,7 @@ pip install raViz
 
 ## Usage
 ```python
-from ra import ra
+import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')
