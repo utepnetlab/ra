@@ -1,5 +1,4 @@
 *.html
-__init__.py
 __pycache__/
 /Ra_Viz.egg_info/*
 *.egg-info/
