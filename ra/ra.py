@@ -17,9 +17,9 @@ import seaborn as sns
 from io import StringIO
 from types import MethodType
 
-class ra():
+class Map():
     """
-    Ra is a class will create, save and customize point to point visualizations.
+    Map is a class will create, save and customize point to point visualizations.
     
     Ra Map Customization Parameters:
         popupLen The amount of flows that will appear in a popup. Default = 3

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="raViz",
-    version="0.0.4",
+    version="0.1.0",
     author="Christopher Mendoza",
     author_email="camendoza7@miners.utep.edu",
     description="Package to help create flow visualizations",
@@ -22,11 +22,11 @@ pip install raViz
 
 ## Usage
 ```python
-from raViz import ra
+import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')
-ra = ra(df)
+ra = ra.Map(df)
 ra.createMap()
 ra.saveMap('MyMap.html')
 ```

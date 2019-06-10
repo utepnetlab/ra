@@ -5,7 +5,7 @@ Example usage of ra to create a geographic visualization of passenger flows betw
 This script generates a DataFrame of random data and uses ra to produce an html file with the map.
 """
 
-from ra import ra
+import ra
 import pandas as pd
 from itertools import combinations
 import random
@@ -89,7 +89,7 @@ for combo in combos:
 df = pd.DataFrame(data)
 
 #Create instance of ra
-ra = ra(df)
+ra = ra.Map(df)
 #Set the line fuction to color lines based on the defined function "lineColor"
 ra.setLineFunction(lineColor)
 #Tell ra to get logos for markers and check if the url is valid

@@ -9,11 +9,11 @@ pip install raViz
 
 ## Usage
 ```python
-from raViz import ra
+from ra import ra
 import pandas as pd
 
 df = pd.read_csv('mycsv.csv')
-ra = ra(df)
+ra = ra.Map(df)
 ra.createMap()
 ra.saveMap('MyMap.html')
 ```

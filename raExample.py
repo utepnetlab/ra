@@ -6,7 +6,7 @@ Ra only uses the netflow data that has a destination within the US and further a
 This example also shows how you can create custom line color decisions as well as custom popup plots.
 """
 
-from ra import ra
+import ra
 import pandas as pd
 
 #Define function to color lines based on if any flow between two locations has a packet count less than 2    
@@ -39,7 +39,7 @@ df['src_logo'] = '<img src="' + "http://engsrvdb00.utep.edu/amis/images/as_image
 df['dst_logo'] = '<img src="' + "http://engsrvdb00.utep.edu/amis/images/as_images/" + df['dst_as'].astype(str) + ".png" + '" height="50" width="50">'
 
 #Make instance of ra
-ra = ra(df)
+ra = ra.Map(df)
 #Set the line fuction to color lines based on the defined function "lineColor"
 ra.setLineFunction(lineColor)
 #Only include flows that have the destination country as the United States 
