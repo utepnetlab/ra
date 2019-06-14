@@ -1,6 +1,10 @@
 # Ra
 Ra helps easily generate geographic visualization using the folium package.
 
+![alt text](https://i.imgur.com/wQnCrsG.png)
+
+![alt text](https://i.imgur.com/GxhxJA1.png)
+
 ## Installation
 
 ```bash
